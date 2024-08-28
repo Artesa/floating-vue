@@ -468,7 +468,7 @@ const createPopper = () => defineComponent({
           this.parentPopper.lockedChild = this
           clearTimeout(this.parentPopper.lockedChildTimer)
           this.parentPopper.lockedChildTimer = setTimeout(() => {
-            if (this.parentPopper.lockedChild === this) {
+            if (this.parentPopper.lockedChild !== this) {
               this.parentPopper.lockedChild.hide({ skipDelay })
               this.parentPopper.lockedChild = null
             }
