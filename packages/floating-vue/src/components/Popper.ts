@@ -887,6 +887,9 @@ const createPopper = () => defineComponent({
       // Add trigger show events
 
       const handleShow = (event: PopperEvent) => {
+        if (event.type === 'contextmenu') {
+          event.preventDefault()
+        }
         if (this.isShown && !this.$_hideInProgress) {
           return
         }
@@ -913,7 +916,7 @@ const createPopper = () => defineComponent({
 
     $_registerEventListeners (targetNodes: Element[], eventType: string, handler: (event: Event) => void) {
       this.$_events.push({ targetNodes, eventType, handler })
-      targetNodes.forEach(node => node.addEventListener(eventType, handler, supportsPassive
+      targetNodes.forEach(node => node.addEventListener(eventType, handler, supportsPassive && eventType !== 'contextmenu'
         ? {
           passive: true,
         }

@@ -68,7 +68,7 @@ import PopperMethods from './PopperMethods'
 import ThemeClass from './ThemeClass'
 import type { Placement } from '../util/popper.js'
 
-export type TriggerEvent = 'hover' | 'click' | 'focus' | 'touch'
+export type TriggerEvent = 'hover' | 'click' | 'focus' | 'touch' | 'contextmenu'
 
 let Element: any = function () {}
 if (typeof window !== 'undefined') {

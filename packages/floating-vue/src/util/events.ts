@@ -4,6 +4,7 @@ export const SHOW_EVENT_MAP = {
   click: 'click',
   touch: 'touchstart',
   pointer: 'pointerdown',
+  contextmenu: 'contextmenu',
 }
 
 export const HIDE_EVENT_MAP = {
@@ -12,4 +13,5 @@ export const HIDE_EVENT_MAP = {
   click: 'click',
   touch: 'touchend',
   pointer: 'pointerup',
+  contextmenu: 'contextmenu',
 }
